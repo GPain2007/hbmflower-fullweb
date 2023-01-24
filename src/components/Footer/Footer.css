@@ -1,0 +1,58 @@
+.website {
+  text-decoration: none;
+  color: goldenrod;
+  font-family: "GlacialIndifferenceRegular";
+}
+
+.footer {
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.instagram {
+  size: 30px;
+  text-decoration: none;
+  color: goldenrod;
+  font-family: "GlacialIndifferenceRegular";
+  padding-left: 66rem;
+}
+
+.about {
+  text-decoration: none;
+  color: goldenrod;
+  font-family: "GlacialIndifferenceRegular";
+}
+
+.gallery {
+  text-decoration: none;
+  color: goldenrod;
+  font-family: "GlacialIndifferenceRegular";
+}
+
+.contact {
+  text-decoration: none;
+  color: goldenrod;
+  font-family: "GlacialIndifferenceRegular";
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+
+  color: goldenrod;
+  font-family: "GlacialIndifferenceRegular";
+  font-size: 30px;
+}
+
+.imagewords {
+  justify-content: center;
+  align-items: center;
+}
+
+.picRow {
+  margin-bottom: 85px;
+}
+
+.logoImage {
+  padding-left: 1.5rem;
+}

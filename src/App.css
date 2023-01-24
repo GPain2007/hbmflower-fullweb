@@ -1,0 +1,66 @@
+.home {
+  height: 800px;
+  background-image: url(./images/IMG_7677.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.second {
+  padding: 60px 90px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fff7f4;
+}
+
+.third {
+  padding: 92px;
+  transition-timing-function: ease;
+  transition-duration: 0.9s;
+  transition-delay: 0.289655s;
+}
+
+.fourth {
+  padding: 92px;
+}
+
+.firstpic {
+  padding: 0px;
+}
+
+.secondpic {
+  padding: 0px;
+}
+.word {
+  font-size: 40px;
+  font-family: "GlacialIndifferenceRegular";
+  color: goldenrod;
+}
+
+.about-home {
+  height: 800px;
+  background-image: url(./images/IMG_7989.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-title {
+  font-size: larger;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-top: 84px;
+}
+
+.about-second {
+  padding: 60px 90px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fff7f4;
+}
+
+.desktopView {
+  display: block;
+}
+
+.mobileView {
+  display: none;
+}

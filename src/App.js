@@ -6,6 +6,8 @@ import Nav from "./components/Nav/Nav";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [show, setShow] = useState(false);
