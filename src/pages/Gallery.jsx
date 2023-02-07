@@ -5,7 +5,8 @@ function Gallery({ show }) {
     <>
       {!show && (
         <>
-          <div>Gallery</div>
+          <div className="desktopView">Gallery</div>
+          <div className="mobileView"> Mobile Gallery</div>
         </>
       )}
     </>
