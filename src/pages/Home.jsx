@@ -85,8 +85,8 @@ function Home({ show }) {
               <LazyLoadImage
                 src={IMG1}
                 alt="flower image"
-                height={600}
-                width={600}
+                height={200}
+                width={175}
               />
               <div className="third">
                 <img
@@ -94,7 +94,7 @@ function Home({ show }) {
                   alt="Logo"
                   height={110}
                   width={100}
-                  style={{ marginLeft: "200px" }}
+                  style={{ marginLeft: "30px" }}
                 />
                 <div className="word">
                   "When Life gives you lemons, make lemonade.
@@ -105,7 +105,7 @@ function Home({ show }) {
             <div className="fourth">
               <Row>
                 <Col md={{ offset: 2 }} className="firstpic">
-                  <img src={IMG7} alt="Pic 7" height={525} width={555} />
+                  <img src={IMG7} alt="Pic 7" height={125} width={155} />
                   <div
                     style={{ paddingTop: "20px", paddingRight: "2rem" }}
                     className="d-flex justify-content-end"
@@ -116,7 +116,7 @@ function Home({ show }) {
                         textDecoration: "none",
                         color: "goldenrod",
                         fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "20px",
+                        fontSize: "18px",
                       }}
                     >
                       Get a Free Quote Today!
@@ -124,7 +124,7 @@ function Home({ show }) {
                   </div>
                 </Col>
                 <Col className="secondpic">
-                  <img src={IMG6} alt="Pic 6" height={315} width={350} />
+                  <img src={IMG6} alt="Pic 6" height={175} width={180} />
                   <div style={{ paddingTop: "20px", paddingLeft: "2rem" }}>
                     <a
                       href="/about"
@@ -133,7 +133,7 @@ function Home({ show }) {
                         color: "goldenrod",
                         paddingBottom: "20px",
                         fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "20px",
+                        fontSize: "18px",
                       }}
                     >
                       See My Work

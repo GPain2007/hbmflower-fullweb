@@ -89,4 +89,20 @@
   .fourth {
     padding: 30px;
   }
+  .home {
+    height: 250px;
+  }
+  .second {
+    padding: 60px 20px;
+  }
+  .waitingMob {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fff7f4;
+    height: 100vh;
+    font-size: 30px;
+    font-family: "GlacialIndifferenceRegular";
+    color: goldenrod;
+  }
 }
