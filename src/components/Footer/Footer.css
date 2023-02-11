@@ -41,7 +41,7 @@
 
   color: goldenrod;
   font-family: "GlacialIndifferenceRegular";
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .imagewords {
@@ -55,4 +55,30 @@
 
 .logoImage {
   padding-left: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .instagram {
+    size: 30px;
+    padding-left: 11rem;
+  }
+  .footer {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+  .logoImage {
+    padding-left: 0rem;
+  }
+  .phoneView {
+    padding-bottom: 10px;
+  }
+  .about {
+    font-size: 30px;
+  }
+  .gallery {
+    font-size: 30px;
+  }
+  .contact {
+    font-size: 30px;
+  }
 }

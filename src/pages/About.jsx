@@ -109,8 +109,8 @@ function About({ show }) {
                 <LazyLoadImage
                   src={IMG9}
                   alt="flower image"
-                  height={800}
-                  width={600}
+                  height={100}
+                  width={100}
                 />
               </div>
             </div>
@@ -120,27 +120,27 @@ function About({ show }) {
                   <img
                     src={IMG10}
                     alt="Pic 7"
-                    height={205}
-                    width={355}
+                    height={105}
+                    width={155}
                     style={{ marginBottom: "10px" }}
                   />
-                  <img src={LogoAbout} alt="Pic 10" height={175} width={355} />
+                  <img src={LogoAbout} alt="Pic 10" height={150} width={155} />
                   <div
                     style={{ paddingTop: "20px", paddingRight: "2rem" }}
                     className="d-flex justify-content-end"
                   ></div>
                 </Col>
                 <Col className="secondpic">
-                  <img src={IMG11} alt="Pic 6" height={315} width={350} />
-                  <div style={{ paddingTop: "20px", paddingLeft: "2rem" }}>
+                  <img src={IMG11} alt="Pic 6" height={185} width={150} />
+                  <div style={{ paddingTop: "0px" }}>
                     <a
                       href="/about"
                       style={{
                         textDecoration: "none",
                         color: "goldenrod",
-                        paddingBottom: "20px",
+
                         fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "20px",
+                        fontSize: "18px",
                       }}
                     >
                       See My Gallery
@@ -152,7 +152,7 @@ function About({ show }) {
                         textDecoration: "none",
                         color: "goldenrod",
                         fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "20px",
+                        fontSize: "18px",
                       }}
                     >
                       Get a Consultation

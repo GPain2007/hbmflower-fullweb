@@ -37,7 +37,7 @@
 }
 
 .about-home {
-  height: 800px;
+  height: 550px;
   background-image: url(./images/IMG_7989.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,4 +63,30 @@
 
 .mobileView {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobileView {
+    display: block;
+  }
+  .desktopView {
+    display: none;
+  }
+  .about-title {
+    font-size: small;
+    padding-top: 24px;
+  }
+  .third {
+    padding: 12px;
+  }
+
+  .word {
+    font-size: 10px;
+  }
+  .about-second {
+    padding: 10px 20px;
+  }
+  .fourth {
+    padding: 30px;
+  }
 }
