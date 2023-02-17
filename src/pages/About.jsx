@@ -41,22 +41,17 @@ function About({ show }) {
             </div>
             <div className="fourth">
               <Row>
-                <Col md={{ offset: 2 }} className="firstpic">
+                <Col md={{ offset: 1, span: 3 }} className="firstpic">
                   <img
                     src={IMG10}
                     alt="Pic 7"
-                    height={205}
-                    width={355}
-                    style={{ marginBottom: "10px" }}
+                    height={575}
+                    width={400}
+                    style={{ marginBottom: "10px", paddingRight: "15px" }}
                   />
-                  <img src={LogoAbout} alt="Pic 10" height={175} width={355} />
-                  <div
-                    style={{ paddingTop: "20px", paddingRight: "2rem" }}
-                    className="d-flex justify-content-end"
-                  ></div>
                 </Col>
-                <Col className="secondpic">
-                  <img src={IMG11} alt="Pic 6" height={315} width={350} />
+                <Col md={{ span: 3 }}>
+                  <img src={IMG11} alt="Pic 6" height={315} width={360} />
                   <div style={{ paddingTop: "20px", paddingLeft: "2rem" }}>
                     <a
                       href="/about"
@@ -83,6 +78,15 @@ function About({ show }) {
                       Get a Consultation
                     </a>
                   </div>
+
+                  <div
+                    style={{ paddingTop: "20px", paddingRight: "1rem" }}
+                    className="d-flex justify-content-end"
+                  ></div>
+                </Col>
+
+                <Col className="secondpic" md={{ span: 3 }}>
+                  <img src={LogoAbout} alt="Pic 10" height={575} width={400} />
                 </Col>
               </Row>
             </div>
