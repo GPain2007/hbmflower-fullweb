@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 import { ImageData } from "./ImageData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
@@ -15,49 +15,69 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 const Carousel = ({ slides }) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const length = slides.length;
-  const nextSlide = () => {
-    setCurrentImage(currentImage === length - 1 ? 0 : currentImage + 1);
+  const mod = (n, m) => {
+    let result = n % m;
+    // Return a positive value
+    return result >= 0 ? result : result + m;
   };
 
-  const prevSlide = () => {
-    setCurrentImage(currentImage === 0 ? length - 1 : currentImage - 1);
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setCurrentImage((currentImage + 1) % ImageData.length);
+    }, 3000);
+  }, [currentImage]);
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
-
-  // const nextImage = () => {
-  //   const newIndex = (currentImage + 1) % images.length;
-  //   setCurrentImage(newIndex);
+  //Old slide InFo
+  // const length = slides.length;
+  // const nextSlide = () => {
+  //   setCurrentImage(currentImage === length - 1 ? 0 : currentImage + 1);
   // };
 
-  // const prevImage = () => {
-  //   const newIndex = (currentImage + images.length - 1) % images.length;
-  //   setCurrentImage(newIndex);
+  // const prevSlide = () => {
+  //   setCurrentImage(currentImage === 0 ? length - 1 : currentImage - 1);
   // };
 
-  // return (
-  //   <div className="carousel">
-  //     <img src={images[currentImage]} alt={`Image ${currentImage}`} />
-  //     <button onClick={prevImage}>Prev</button>
-  //     <button onClick={nextImage}>Next</button>
-  //   </div>
-  // );
+  // if (!Array.isArray(slides) || slides.length <= 0) {
+  //   return null;
+  // }
+
   return (
     <section className="carousel">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      {/* <FaArrowAltCircleLeft className="left-arrow" />
+      <FaArrowAltCircleRight className="right-arrow" /> */}
       {ImageData.map((slide, index) => {
+        // return (
+        //   <div
+        //     className={index === currentImage ? "slide active" : "slide"}
+        //     key={index}
+        //   >
+        //     {index === currentImage && (
+        //       <img src={slide.src} alt={slide.alt} className="image" />
+        //     )}
+        //   </div>
+        // );
+        const indexLeft = mod(currentImage - 1, ImageData.length);
+        const indexRight = mod(currentImage + 1, ImageData.length);
+        let className = "";
+
+        if (index === currentImage) {
+          className = "image image--active";
+        } else if (index === indexRight) {
+          className = "image image--right";
+        } else if (index === indexLeft) {
+          className = " image image--left";
+        } else {
+          className = "image";
+        }
+
         return (
-          <div
-            className={index === currentImage ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === currentImage && (
-              <img src={slide.src} alt={slide.alt} className="image" />
-            )}
+          <div style={{ height: "1000px" }}>
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className={className}
+              key={slide.id}
+            />
           </div>
         );
       })}

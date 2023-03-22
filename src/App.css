@@ -5,12 +5,12 @@
   background-size: cover;
 } */
 
-.second {
+/* .second {
   padding: 60px 90px;
   display: flex;
   justify-content: space-evenly;
   background-color: #fff7f4;
-}
+} */
 
 /* .third {
   padding: 92px;
@@ -18,11 +18,11 @@
   transition-duration: 0.9s;
   transition-delay: 0.289655s;
 } */
-
+/* 
 .fourth {
   padding: 92px;
   padding-left: 250px;
-}
+} */
 
 .firstpic {
   padding: 0px;
@@ -55,7 +55,7 @@
 }
 
 .about-second {
-  padding: 60px 90px;
+  padding: 100px 90px;
   display: flex;
   justify-content: space-evenly;
   background-color: #fff7f4;
