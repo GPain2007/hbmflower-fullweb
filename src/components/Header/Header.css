@@ -1,0 +1,28 @@
+.headerRow {
+  font-size: 40px;
+  font-family: "GlacialIndifferenceRegular";
+  color: goldenrod;
+  display: flex;
+  justify-content: center;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.contactUs {
+  font-size: 15px;
+  font-family: "GlacialIndifferenceRegular";
+  background-color: goldenrod;
+  border: none;
+  color: white;
+  border-radius: 1px;
+}
+.paragraphRow {
+  font-size: 16px;
+  font-family: "GlacialIndifferenceRegular";
+  color: goldenrod;
+  display: flex;
+  justify-content: center;
+  white-space: pre-wrap;
+  text-align: center;
+  padding-bottom: 12px;
+}

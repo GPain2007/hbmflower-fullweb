@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-
+import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Carousel from "../components/Carousel/Carousel";
 import { ImageData } from "../components/Carousel/ImageData";
@@ -15,6 +15,7 @@ function Home({ show }) {
       {!show && (
         <>
           <div className="desktopView">
+            <Header />
             {/* <div className="home"></div> */}
             <Carousel slides={ImageData} />
             <div className="about-second">
@@ -42,6 +43,7 @@ function Home({ show }) {
             <Footer />
           </div>
           <div className="mobileView">
+            <Header />
             <Carousel slides={ImageData} />
             <div className="about-second">
               <div className="word">
