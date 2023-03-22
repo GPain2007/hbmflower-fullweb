@@ -6,7 +6,7 @@
 
 .footer {
   padding: 20px;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .instagram {
@@ -14,43 +14,46 @@
   text-decoration: none;
   color: goldenrod;
   font-family: "GlacialIndifferenceRegular";
-  padding-left: 81rem;
+  padding-top: 40px;
 }
 
 .about {
   text-decoration: none;
   color: goldenrod;
   font-family: "GlacialIndifferenceRegular";
+  font-size: 50px;
+  padding-left: 216px;
 }
 
 .gallery {
   text-decoration: none;
   color: goldenrod;
   font-family: "GlacialIndifferenceRegular";
+  font-size: 50px;
+  padding-left: 100px;
 }
 
 .contact {
   text-decoration: none;
   color: goldenrod;
   font-family: "GlacialIndifferenceRegular";
+  font-size: 50px;
+  padding-left: 100px;
 }
 
-.image {
+.imageFooter {
   display: flex;
   flex-direction: column;
-
   color: goldenrod;
   font-family: "GlacialIndifferenceRegular";
   font-size: 35px;
 }
 
 .imagewords {
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.picRow {
-  margin-bottom: 85px;
+  font-size: 80px;
 }
 
 .logoImage {

@@ -17,7 +17,7 @@ function Nav() {
         </a>
         <nav ref={navRef}>
           <a href="/contact">Contact</a>
-          <a href="/about">About</a>
+
           <a href="/gallery">Gallery</a>
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />

@@ -99,11 +99,10 @@ const sendEmail = (values, actions) => {
 
 const ContactForm = () => {
   return (
-    <Container>
+    <Container fluid className="contact_page">
       <Row>
-        {/* <Col md={{ span: 8, offset: 2 }}> */}
-        <Col md={8} lg={6}>
-          <h2 className="mt-5">Contact Us</h2>
+        <Col md={{ span: 8, offset: 3 }} lg={6}>
+          <h1 className="mt-5 text-center">Contact Us</h1>
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -269,7 +268,7 @@ const ContactForm = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Type of Event:</label>
+                  <label className="form-label">Type of Inquiry:</label>
                   <div role="group" aria-labelledby="reason-group">
                     <div>
                       <label>
@@ -279,18 +278,17 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <label>
-                        <Field
-                          type="radio"
-                          name="reason"
-                          value="Office Party"
-                        />{" "}
-                        Office Party
+                        <Field type="radio" name="reason" value="Event" /> Event
                       </label>
                     </div>
                     <div>
                       <label>
-                        <Field type="radio" name="reason" value="Funeral" />{" "}
-                        Funeral
+                        <Field
+                          type="radio"
+                          name="reason"
+                          value="Floral Arrangment"
+                        />{" "}
+                        Floral Arrangment
                       </label>
                     </div>
                     <div>

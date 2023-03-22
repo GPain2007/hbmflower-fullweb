@@ -1,9 +1,9 @@
-.home {
+/* .home {
   height: 800px;
-  background-image: url(./images/IMG_7677.jpg);
+  background-image: url(./images/IMG_2024.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .second {
   padding: 60px 90px;
@@ -12,12 +12,12 @@
   background-color: #fff7f4;
 }
 
-.third {
+/* .third {
   padding: 92px;
   transition-timing-function: ease;
   transition-duration: 0.9s;
   transition-delay: 0.289655s;
-}
+} */
 
 .fourth {
   padding: 92px;
@@ -35,6 +35,8 @@
   font-size: 40px;
   font-family: "GlacialIndifferenceRegular";
   color: goldenrod;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
 .about-home {
@@ -48,7 +50,8 @@
   font-size: larger;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  padding-top: 84px;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
 .about-second {
@@ -60,6 +63,7 @@
 
 .desktopView {
   display: block;
+  background-color: #fff7f4;
 }
 
 .mobileView {
@@ -77,8 +81,16 @@
   color: goldenrod;
   background-image: url(./images/logo.png);
   background-repeat: no-repeat;
-  background-size: contain;
+
   background-position-x: 325px;
+}
+
+.contact_page {
+  background-color: #fff7f4;
+  color: goldenrod;
+  font-size: 30px;
+  font-family: "GlacialIndifferenceRegular";
+  background-position: 0% 30%;
 }
 
 @media only screen and (max-width: 768px) {

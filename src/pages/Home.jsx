@@ -1,13 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Row, Col } from "react-bootstrap";
-import IMG1 from "../images/IMG_7698.jpg";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Logo from "../images/logo.png";
-import IMG6 from "../images/IMG_7902.jpg";
-import IMG7 from "../images/IMG_7965.jpg";
+
 import Footer from "../components/Footer/Footer";
+import Carousel from "../components/Carousel/Carousel";
+import { ImageData } from "../components/Carousel/ImageData";
+import IMG9 from "../images/profile2.jpg";
 
 function Home({ show }) {
   return (
@@ -15,132 +15,55 @@ function Home({ show }) {
       {!show && (
         <>
           <div className="desktopView">
-            <div className="home"></div>
-            <div className="second">
-              <LazyLoadImage
-                src={IMG1}
-                alt="flower image"
-                height={600}
-                width={600}
-              />
-              <div className="third">
-                <img
-                  src={Logo}
-                  alt="Logo"
-                  height={110}
-                  width={100}
-                  style={{ marginLeft: "200px" }}
-                />
-                <div className="word">
-                  "When Life gives you lemons, make lemonade.
-                  <br /> When life gives you flowers, make wedding decorations"
-                </div>
+            {/* <div className="home"></div> */}
+            <Carousel slides={ImageData} />
+            <div className="about-second">
+              <div className="word">
+                <h1 className="about-title">Meet Harolyn Munford</h1>
+                As a child I had a natural inclination toward art but I never
+                really had a love for it. Fast forward about 20 years and just
+                for fun I take a free floral arrangement class and my life is
+                forever changed. The joy and happiness that I got from creating
+                a simple arrangement was such an eye opening experience. It made
+                me realize that I could do this for a living and bring what I
+                was feeling to others. That's how HBM Flower City was born. With
+                the concept that life could be just a bit more beauiful, just by
+                adding flowers.
               </div>
-            </div>
-            <div className="fourth">
-              <Row>
-                <Col md={{ offset: 2 }} className="firstpic">
-                  <img src={IMG7} alt="Pic 7" height={525} width={555} />
-                  <div
-                    style={{ paddingTop: "20px", paddingRight: "2rem" }}
-                    className="d-flex justify-content-end"
-                  >
-                    <a
-                      href="/contact"
-                      style={{
-                        textDecoration: "none",
-                        color: "goldenrod",
-                        fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "20px",
-                      }}
-                    >
-                      Get a Free Quote Today!
-                    </a>
-                  </div>
-                </Col>
-                <Col className="secondpic">
-                  <img src={IMG6} alt="Pic 6" height={315} width={350} />
-                  <div style={{ paddingTop: "20px", paddingLeft: "2rem" }}>
-                    <a
-                      href="/about"
-                      style={{
-                        textDecoration: "none",
-                        color: "goldenrod",
-                        paddingBottom: "20px",
-                        fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "20px",
-                      }}
-                    >
-                      See My Work
-                    </a>
-                  </div>
-                </Col>
-              </Row>
+              <div className="third">
+                <LazyLoadImage
+                  src={IMG9}
+                  alt="flower image"
+                  height={800}
+                  width={600}
+                />
+              </div>
             </div>
             <Footer />
           </div>
           <div className="mobileView">
-            <div className="home"></div>
-            <div className="second">
-              <LazyLoadImage
-                src={IMG1}
-                alt="flower image"
-                height={200}
-                width={175}
-              />
-              <div className="third">
-                <img
-                  src={Logo}
-                  alt="Logo"
-                  height={110}
-                  width={100}
-                  style={{ marginLeft: "30px" }}
-                />
-                <div className="word">
-                  "When Life gives you lemons, make lemonade.
-                  <br /> When life gives you flowers, make wedding decorations"
-                </div>
+            <Carousel slides={ImageData} />
+            <div className="about-second">
+              <div className="word">
+                <h1 className="about-title">Meet Harolyn Munford</h1>
+                As a child I had a natural inclination toward art but I never
+                really had a love for it. Fast forward about 20 years and just
+                for fun I take a free floral arrangement class and my life is
+                forever changed. The joy and happiness that I got from creating
+                a simple arrangement was such an eye opening experience. It made
+                me realize that I could do this for a living and bring what I
+                was feeling to others. That's how HBM Flower City was born. With
+                the concept that life could be just a bit more beauiful, just by
+                adding flowers.
               </div>
-            </div>
-            <div className="fourth">
-              <Row>
-                <Col md={{ offset: 2 }} className="firstpic">
-                  <img src={IMG7} alt="Pic 7" height={125} width={155} />
-                  <div
-                    style={{ paddingTop: "20px", paddingRight: "2rem" }}
-                    className="d-flex justify-content-end"
-                  >
-                    <a
-                      href="/contact"
-                      style={{
-                        textDecoration: "none",
-                        color: "goldenrod",
-                        fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "18px",
-                      }}
-                    >
-                      Get a Free Quote Today!
-                    </a>
-                  </div>
-                </Col>
-                <Col className="secondpic">
-                  <img src={IMG6} alt="Pic 6" height={175} width={180} />
-                  <div style={{ paddingTop: "20px", paddingLeft: "2rem" }}>
-                    <a
-                      href="/about"
-                      style={{
-                        textDecoration: "none",
-                        color: "goldenrod",
-                        paddingBottom: "20px",
-                        fontFamily: "GlacialIndifferenceRegular",
-                        fontSize: "18px",
-                      }}
-                    >
-                      See My Work
-                    </a>
-                  </div>
-                </Col>
-              </Row>
+              <div className="third">
+                <LazyLoadImage
+                  src={IMG9}
+                  alt="flower image"
+                  height={800}
+                  width={600}
+                />
+              </div>
             </div>
             <Footer />
           </div>

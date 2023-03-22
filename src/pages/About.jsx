@@ -7,6 +7,8 @@ import IMG9 from "../images/profile2.jpg";
 import LogoAbout from "../images/IMG_9940.jpg";
 import IMG10 from "../images/IMG_9958.jpg";
 import IMG11 from "../images/IMG_9997.jpg";
+import Carousel from "../components/Carousel/Carousel";
+import { ImageData } from "../components/Carousel/ImageData";
 
 function About({ show }) {
   return (
@@ -14,31 +16,8 @@ function About({ show }) {
       {!show && (
         <>
           <div className="desktopView">
-            <div className="about-home"></div>
-            <div className="about-second">
-              <div className="word">
-                <h1 className="about-title">Meet Harolyn Munford</h1>
-                As a child I had a natural inclination
-                <br /> toward art but I never really had a love for it. <br />{" "}
-                live in the Fast forward about 20 years and just for fun <br />
-                I take a free floral arrangement class <br /> and my life is
-                forever changed.
-                <br />
-                The joy and happiness that I got from creating
-                <br />
-                a simple arrangement was such an eye opening experience. <br />
-                It made me realize that I could do this for a living and bring
-                this same
-              </div>
-              <div className="third">
-                <LazyLoadImage
-                  src={IMG9}
-                  alt="flower image"
-                  height={800}
-                  width={600}
-                />
-              </div>
-            </div>
+            <Carousel slides={ImageData} />
+
             <div className="fourth">
               <Row>
                 <Col md={{ offset: 1, span: 3 }} className="firstpic">
