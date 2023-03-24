@@ -60,6 +60,27 @@
   padding-left: 1.5rem;
 }
 
+.footer-quote {
+  font-size: 40px;
+  font-family: "GlacialIndifferenceRegular";
+  color: goldenrod;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+a {
+  font-weight: 100;
+  transition: font-weight 0.4s ease-in-out;
+  color: goldenrod;
+  text-decoration: none;
+}
+a:hover,
+.be-bold {
+  font-weight: bolder;
+  cursor: pointer;
+  color: goldenrod;
+}
+
 @media only screen and (max-width: 768px) {
   .instagram {
     size: 30px;

@@ -16,7 +16,7 @@ function Home({ show }) {
         <>
           <div className="desktopView">
             <Header />
-            {/* <div className="home"></div> */}
+
             <Carousel slides={ImageData} />
             <div className="about-second">
               <div className="word">

@@ -24,7 +24,7 @@ const Carousel = ({ slides }) => {
   useEffect(() => {
     setTimeout(() => {
       setCurrentImage((currentImage + 1) % ImageData.length);
-    }, 3000);
+    }, 5000);
   }, [currentImage]);
 
   //Old slide InFo

@@ -28,31 +28,14 @@ function Footer() {
                   flexDirection: "column",
                 }}
               >
-                <div className="word">
-                  <div>Want to work with HBM Flower City?</div> Send us an email
-                  at{" "}
-                  <a
-                    href="mailto:hbmflowercity@gmail.com"
-                    style={{
-                      textDecoration: "none",
-                      color: "goldenrod",
-                      cursor: "pointer",
-                    }}
-                  >
+                <div className="footer-quote">
+                  Want to work with HBM Flower City? <br /> Send us an email at{" "}
+                  <a href="mailto:hbmflowercity@gmail.com">
                     hbmflowercity@gmail.com
-                  </a>{" "}
-                  about your floral needs or click the{" "}
-                  <a
-                    href="/contact"
-                    style={{
-                      textDecoration: "none",
-                      color: "goldenrod",
-                      cursor: "pointer",
-                    }}
-                  >
-                    inquire
-                  </a>{" "}
-                  link to tell us about your event.
+                  </a>
+                  <span> </span>about your floral needs or click the{" "}
+                  <a href="/contact">inquire</a> link to tell us about your
+                  event.
                 </div>
 
                 <a
