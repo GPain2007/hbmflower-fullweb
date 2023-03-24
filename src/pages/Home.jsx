@@ -62,8 +62,8 @@ function Home({ show }) {
                 <LazyLoadImage
                   src={IMG9}
                   alt="flower image"
-                  height={800}
-                  width={600}
+                  height={300}
+                  width={175}
                 />
               </div>
             </div>

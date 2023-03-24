@@ -29,21 +29,6 @@
 .mobileView {
   display: none;
 }
-.waitingDes {
-  padding: 100px 10px;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #fff7f4;
-  height: 100vh;
-  width: 100vw;
-  font-size: 30px;
-  font-family: "GlacialIndifferenceRegular";
-  color: goldenrod;
-  background-image: url(./images/logo.png);
-  background-repeat: no-repeat;
-
-  background-position-x: 325px;
-}
 
 .contact_page {
   background-color: #fff7f4;
@@ -65,7 +50,7 @@
     padding-top: 24px;
   }
   .third {
-    padding: 12px;
+    padding: 5px;
   }
 
   .word {
@@ -82,20 +67,5 @@
   }
   .second {
     padding: 60px 20px;
-  }
-  .waitingMob {
-    padding: 20px 10px;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #fff7f4;
-    height: 100vh;
-    font-size: 30px;
-    font-family: "GlacialIndifferenceRegular";
-    color: goldenrod;
-    background-image: url(./images/logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: 3px;
-    background-position-y: 50px;
   }
 }

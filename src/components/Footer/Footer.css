@@ -84,7 +84,8 @@ a:hover,
 @media only screen and (max-width: 768px) {
   .instagram {
     size: 30px;
-    padding-left: 11rem;
+
+    padding-top: 20px;
   }
   .footer {
     padding-top: 30px;
@@ -104,5 +105,8 @@ a:hover,
   }
   .contact {
     font-size: 30px;
+  }
+  .imagewords {
+    font-size: 20px;
   }
 }

@@ -42,46 +42,92 @@ const Carousel = ({ slides }) => {
   // }
 
   return (
-    <section className="carousel">
-      {/* <FaArrowAltCircleLeft className="left-arrow" />
+    <>
+      <div className="desktopView">
+        <section className="carousel">
+          {/* <FaArrowAltCircleLeft className="left-arrow" />
       <FaArrowAltCircleRight className="right-arrow" /> */}
-      {ImageData.map((slide, index) => {
-        // return (
-        //   <div
-        //     className={index === currentImage ? "slide active" : "slide"}
-        //     key={index}
-        //   >
-        //     {index === currentImage && (
-        //       <img src={slide.src} alt={slide.alt} className="image" />
-        //     )}
-        //   </div>
-        // );
-        const indexLeft = mod(currentImage - 1, ImageData.length);
-        const indexRight = mod(currentImage + 1, ImageData.length);
-        let className = "";
+          {ImageData.map((slide, index) => {
+            // return (
+            //   <div
+            //     className={index === currentImage ? "slide active" : "slide"}
+            //     key={index}
+            //   >
+            //     {index === currentImage && (
+            //       <img src={slide.src} alt={slide.alt} className="image" />
+            //     )}
+            //   </div>
+            // );
+            const indexLeft = mod(currentImage - 1, ImageData.length);
+            const indexRight = mod(currentImage + 1, ImageData.length);
+            let className = "";
 
-        if (index === currentImage) {
-          className = "image image--active";
-        } else if (index === indexRight) {
-          className = "image image--right";
-        } else if (index === indexLeft) {
-          className = " image image--left";
-        } else {
-          className = "image";
-        }
+            if (index === currentImage) {
+              className = "image image--active";
+            } else if (index === indexRight) {
+              className = "image image--right";
+            } else if (index === indexLeft) {
+              className = " image image--left";
+            } else {
+              className = "image";
+            }
 
-        return (
-          <div style={{ height: "1000px" }}>
-            <img
-              src={slide.src}
-              alt={slide.alt}
-              className={className}
-              key={slide.id}
-            />
-          </div>
-        );
-      })}
-    </section>
+            return (
+              <div style={{ height: "1000px" }}>
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className={className}
+                  key={slide.id}
+                />
+              </div>
+            );
+          })}
+        </section>
+      </div>
+      <div className="mobileView">
+        <section className="carousel">
+          {/* <FaArrowAltCircleLeft className="left-arrow" />
+      <FaArrowAltCircleRight className="right-arrow" /> */}
+          {ImageData.map((slide, index) => {
+            // return (
+            //   <div
+            //     className={index === currentImage ? "slide active" : "slide"}
+            //     key={index}
+            //   >
+            //     {index === currentImage && (
+            //       <img src={slide.src} alt={slide.alt} className="image" />
+            //     )}
+            //   </div>
+            // );
+            const indexLeft = mod(currentImage - 1, ImageData.length);
+            const indexRight = mod(currentImage + 1, ImageData.length);
+            let className = "";
+
+            if (index === currentImage) {
+              className = "image image--active";
+            } else if (index === indexRight) {
+              className = "image image--right";
+            } else if (index === indexLeft) {
+              className = " image image--left";
+            } else {
+              className = "image";
+            }
+
+            return (
+              <div style={{ height: "350px" }}>
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className={className}
+                  key={slide.id}
+                />
+              </div>
+            );
+          })}
+        </section>
+      </div>
+    </>
   );
 };
 

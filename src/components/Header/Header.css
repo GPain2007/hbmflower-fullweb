@@ -26,3 +26,12 @@
   white-space: pre-wrap;
   text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+  .contactUs {
+    font-size: 5px;
+  }
+  .paragraphRow {
+    font-size: 13px;
+  }
+}
