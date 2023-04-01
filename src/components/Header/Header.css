@@ -27,11 +27,25 @@
   text-align: center;
 }
 
+.desktopView {
+  display: block;
+  background-color: #fff7f4;
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .headerRow {
+    font-size: 60px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .contactUs {
     font-size: 5px;
   }
   .paragraphRow {
-    font-size: 13px;
+    padding-bottom: 20px;
   }
 }

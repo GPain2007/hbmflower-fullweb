@@ -25,6 +25,9 @@
   display: block;
   background-color: #fff7f4;
 }
+.tabletView {
+  display: none;
+}
 
 .mobileView {
   display: none;
@@ -36,6 +39,45 @@
   font-size: 30px;
   font-family: "GlacialIndifferenceRegular";
   background-position: 0% 30%;
+}
+
+.tabletView {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .mobileView {
+    display: none;
+  }
+  .desktopView {
+    display: block;
+  }
+  .tabletView {
+    display: none;
+    background-color: #fff7f4;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .image {
+    height: 375px;
+    width: 375px;
+  }
+  .carousel {
+    height: 450px;
+  }
+  .mobileView {
+    display: none;
+  }
+  .desktopView {
+    display: none;
+  }
+  .tabletView {
+    display: block;
+    background-color: #fff7f4;
+  }
+  .word {
+    font-size: 19px;
+  }
 }
 
 @media only screen and (max-width: 768px) {

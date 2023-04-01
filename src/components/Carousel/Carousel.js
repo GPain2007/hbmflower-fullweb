@@ -85,6 +85,48 @@ const Carousel = ({ slides }) => {
           })}
         </section>
       </div>
+      <div className="tabletView">
+        <section className="carousel">
+          {/* <FaArrowAltCircleLeft className="left-arrow" />
+      <FaArrowAltCircleRight className="right-arrow" /> */}
+          {ImageData.map((slide, index) => {
+            // return (
+            //   <div
+            //     className={index === currentImage ? "slide active" : "slide"}
+            //     key={index}
+            //   >
+            //     {index === currentImage && (
+            //       <img src={slide.src} alt={slide.alt} className="image" />
+            //     )}
+            //   </div>
+            // );
+            const indexLeft = mod(currentImage - 1, ImageData.length);
+            const indexRight = mod(currentImage + 1, ImageData.length);
+            let className = "";
+
+            if (index === currentImage) {
+              className = "image image--active";
+            } else if (index === indexRight) {
+              className = "image image--right";
+            } else if (index === indexLeft) {
+              className = " image image--left";
+            } else {
+              className = "image";
+            }
+
+            return (
+              <div style={{ height: "400px" }}>
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className={className}
+                  key={slide.id}
+                />
+              </div>
+            );
+          })}
+        </section>
+      </div>
       <div className="mobileView">
         <section className="carousel">
           {/* <FaArrowAltCircleLeft className="left-arrow" />
