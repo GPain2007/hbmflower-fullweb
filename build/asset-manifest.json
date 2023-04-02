@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.880c48a4.css",
+    "main.js": "/static/js/main.1e787940.js",
+    "static/media/profile2.jpg": "/static/media/profile2.9f4f61cde2cc9463a744.jpg",
+    "static/media/IMG_7701.jpg": "/static/media/IMG_7701.6f9fd17cfd59f5446a81.jpg",
+    "static/media/IMG_7986.jpg": "/static/media/IMG_7986.aab2b36a5648e2e8a9c2.jpg",
+    "static/media/IMG_9958.jpg": "/static/media/IMG_9958.75566b2858bd26efc482.jpg",
+    "static/media/IMG_9939.jpg": "/static/media/IMG_9939.67270775a0e77eb17d7f.jpg",
+    "static/media/StemsOfATX-2.jpg": "/static/media/StemsOfATX-2.ea2abc9a33df53b2c6f0.jpg",
+    "static/media/StyledShoot2023.jpg": "/static/media/StyledShoot2023.4640fbb7da5655177a50.jpg",
+    "static/media/StemsOfATX.jpg": "/static/media/StemsOfATX.ad22a7940c0b738c0994.jpg",
+    "static/media/IMG_2024.jpg": "/static/media/IMG_2024.7390f95a79d5f8475c6e.jpg",
+    "static/media/IMG_7698.jpg": "/static/media/IMG_7698.d0845b98fa6f3abd60af.jpg",
+    "static/media/IMG_2025.jpg": "/static/media/IMG_2025.ee522cfdc6c9cf7d2724.jpg",
+    "static/media/logo.png": "/static/media/logo.9dbc00d1dcde8c5b6acd.png",
+    "index.html": "/index.html",
+    "main.880c48a4.css.map": "/static/css/main.880c48a4.css.map",
+    "main.1e787940.js.map": "/static/js/main.1e787940.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.880c48a4.css",
+    "static/js/main.1e787940.js"
+  ]
+}

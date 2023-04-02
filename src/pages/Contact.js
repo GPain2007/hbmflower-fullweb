@@ -100,7 +100,7 @@ const sendEmail = (values, actions) => {
   console.log(send);
 };
 
-const ContactForm = () => {
+function Contact() {
   return (
     <>
       <Header />
@@ -345,6 +345,6 @@ const ContactForm = () => {
       </Container>
     </>
   );
-};
+}
 
-export default ContactForm;
+export default Contact;
