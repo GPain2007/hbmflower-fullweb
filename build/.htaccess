@@ -1,6 +1,8 @@
-    RewriteEngine On
+RewriteEngine On
+RewriteRule ^check_mod_rewrite$ - [L]
 RewriteBase /
 RewriteRule ^index\.html$ - [L]
-RewriteCond %{Contact.jsx} !-f
-RewriteCond %{Contact.jsx} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
+
