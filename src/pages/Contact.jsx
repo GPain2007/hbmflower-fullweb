@@ -3,6 +3,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs, { send } from "emailjs-com";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Header from "../components/Header/Header";
+import Carousel from "../components/Carousel/Carousel";
+import Footer from "../components/Footer/Footer";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -99,241 +102,248 @@ const sendEmail = (values, actions) => {
 
 const ContactForm = () => {
   return (
-    <Container fluid className="contact_page">
-      <Row>
-        <Col md={{ span: 8, offset: 3 }} lg={6}>
-          <h1 className="mt-5 text-center">Contact Us</h1>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={(values, actions) => {
-              sendEmail(values, actions);
-            }}
-          >
-            {({ isSubmitting, touched, errors }) => (
-              <Form>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
-                    Name
-                  </label>
-                  <Field
-                    type="text"
-                    name="name"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="name"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Email
-                  </label>
-                  <Field
-                    type="email"
-                    name="email"
-                    className={`form-control ${
-                      touched.email && errors.email ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="email"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="city" className="form-label">
-                    City
-                  </label>
-                  <Field
-                    type="text"
-                    name="city"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="city"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="state" className="form-label">
-                    State
-                  </label>
-                  <Field
-                    type="text"
-                    name="state"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="state"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-
-                <div className="mb-3">
-                  <label htmlFor="zipcode" className="form-label">
-                    Zip Code:
-                  </label>
-                  <Field
-                    type="number"
-                    name="zipcode"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="zipcode"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="budget" className="form-label">
-                    Budget:
-                  </label>
-                  <Field
-                    type="number"
-                    name="budget"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="budget"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="date" className="form-label">
-                    Date of Event:
-                  </label>
-                  <Field
-                    type="date"
-                    name="date"
-                    format="MM-dd-yyyy"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="date"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="venue" className="form-label">
-                    Name of venue:
-                  </label>
-                  <Field
-                    type="text"
-                    name="venue"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="venue"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="phone" className="form-label">
-                    Phone:
-                  </label>
-                  <Field
-                    type="tel"
-                    name="phone"
-                    className={`form-control ${
-                      touched.name && errors.name ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="phone"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label className="form-label">Type of Inquiry:</label>
-                  <div role="group" aria-labelledby="reason-group">
-                    <div>
-                      <label>
-                        <Field type="radio" name="reason" value="Wedding" />{" "}
-                        Wedding
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                        <Field type="radio" name="reason" value="Event" /> Event
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                        <Field
-                          type="radio"
-                          name="reason"
-                          value="Floral Arrangment"
-                        />{" "}
-                        Floral Arrangment
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                        <Field type="radio" name="reason" value="Other" /> Other
-                      </label>
-                    </div>
+    <>
+      <Header />
+      <Carousel />
+      <Container fluid className="contact_page">
+        <Row>
+          <Col md={{ span: 8, offset: 3 }} lg={6}>
+            <h1 className="mt-5 text-center">Contact Us</h1>
+            <Formik
+              initialValues={initialValues}
+              validationSchema={validationSchema}
+              onSubmit={(values, actions) => {
+                sendEmail(values, actions);
+              }}
+            >
+              {({ isSubmitting, touched, errors }) => (
+                <Form>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
+                      Name
+                    </label>
+                    <Field
+                      type="text"
+                      name="name"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="name"
+                      component="div"
+                      className="invalid-feedback"
+                    />
                   </div>
-                  <ErrorMessage
-                    name="reason"
-                    component="div"
-                    className="invalid-feedback d-block"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="message" className="form-label">
-                    Comments
-                  </label>
-                  <Field
-                    name="message"
-                    as="textarea"
-                    className={`form-control ${
-                      touched.message && errors.message ? "is-invalid" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="message"
-                    component="div"
-                    className="invalid-feedback"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  variant="primary"
-                  disabled={isSubmitting}
-                  className="mb-5"
-                >
-                  Send
-                </Button>
-              </Form>
-            )}
-          </Formik>
-        </Col>
-      </Row>
-    </Container>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Email
+                    </label>
+                    <Field
+                      type="email"
+                      name="email"
+                      className={`form-control ${
+                        touched.email && errors.email ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="city" className="form-label">
+                      City
+                    </label>
+                    <Field
+                      type="text"
+                      name="city"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="city"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="state" className="form-label">
+                      State
+                    </label>
+                    <Field
+                      type="text"
+                      name="state"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="state"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+
+                  <div className="mb-3">
+                    <label htmlFor="zipcode" className="form-label">
+                      Zip Code:
+                    </label>
+                    <Field
+                      type="number"
+                      name="zipcode"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="zipcode"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="budget" className="form-label">
+                      Budget:
+                    </label>
+                    <Field
+                      type="number"
+                      name="budget"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="budget"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="date" className="form-label">
+                      Date of Event:
+                    </label>
+                    <Field
+                      type="date"
+                      name="date"
+                      format="MM-dd-yyyy"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="date"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="venue" className="form-label">
+                      Name of venue:
+                    </label>
+                    <Field
+                      type="text"
+                      name="venue"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="venue"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="phone" className="form-label">
+                      Phone:
+                    </label>
+                    <Field
+                      type="tel"
+                      name="phone"
+                      className={`form-control ${
+                        touched.name && errors.name ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="phone"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label className="form-label">Type of Inquiry:</label>
+                    <div role="group" aria-labelledby="reason-group">
+                      <div>
+                        <label>
+                          <Field type="radio" name="reason" value="Wedding" />{" "}
+                          Wedding
+                        </label>
+                      </div>
+                      <div>
+                        <label>
+                          <Field type="radio" name="reason" value="Event" />{" "}
+                          Event
+                        </label>
+                      </div>
+                      <div>
+                        <label>
+                          <Field
+                            type="radio"
+                            name="reason"
+                            value="Floral Arrangment"
+                          />{" "}
+                          Floral Arrangment
+                        </label>
+                      </div>
+                      <div>
+                        <label>
+                          <Field type="radio" name="reason" value="Other" />{" "}
+                          Other
+                        </label>
+                      </div>
+                    </div>
+                    <ErrorMessage
+                      name="reason"
+                      component="div"
+                      className="invalid-feedback d-block"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="message" className="form-label">
+                      Comments
+                    </label>
+                    <Field
+                      name="message"
+                      as="textarea"
+                      className={`form-control ${
+                        touched.message && errors.message ? "is-invalid" : ""
+                      }`}
+                    />
+                    <ErrorMessage
+                      name="message"
+                      component="div"
+                      className="invalid-feedback"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    disabled={isSubmitting}
+                    className="mb-5"
+                  >
+                    Send
+                  </Button>
+                </Form>
+              )}
+            </Formik>
+          </Col>
+        </Row>
+        <Footer />
+      </Container>
+    </>
   );
 };
 

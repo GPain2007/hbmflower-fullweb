@@ -17,6 +17,10 @@
   border-radius: 1px;
   cursor: pointer;
 }
+
+.contactUs:hover {
+  color: white;
+}
 .paragraphRow {
   font-size: 16px;
   font-family: "GlacialIndifferenceRegular";

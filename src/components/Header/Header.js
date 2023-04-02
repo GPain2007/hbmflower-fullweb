@@ -17,7 +17,9 @@ function Header() {
                 paddingBottom: "10px",
               }}
             >
-              <h1>HBM FLower City</h1>
+              <a href="/">
+                <h1>HBM FLower City</h1>
+              </a>
             </Col>
             <Col
               style={{
@@ -26,8 +28,10 @@ function Header() {
                 alignItems: "center",
               }}
             >
-              <button className="contactUs" href="./contact">
-                Contact Us
+              <button type="button" className="contactUs">
+                <a href="/contact" className="contactUs">
+                  Contact Us
+                </a>
               </button>
             </Col>
           </Row>
