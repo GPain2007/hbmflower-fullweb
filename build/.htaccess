@@ -1,4 +1,6 @@
-    Options -MultiViews
     RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.html [QSA,L]
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{Contact.jsx} !-f
+RewriteCond %{Contact.jsx} !-d
+RewriteRule . /index.html [L]
