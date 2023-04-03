@@ -18,7 +18,7 @@ function Header() {
               }}
             >
               <a href="/">
-                <h1>HBM FLower City</h1>
+                <h1>HBM Flower City</h1>
               </a>
             </Col>
             <Col
