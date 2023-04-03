@@ -86,7 +86,7 @@ function Home({ show }) {
                 adding flowers.
               </div>
               <div className="third">
-                <img src={IMG9} alt="portrait" height={370} width={175} />
+                <img src={IMG9} alt="portrait" height={295} width={185} />
               </div>
             </div>
             <Footer />

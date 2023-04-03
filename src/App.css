@@ -93,13 +93,14 @@
   }
   .third {
     padding: 5px;
+    padding-top: 25px;
   }
 
   .word {
     font-size: 13px;
   }
   .about-second {
-    padding: 10px 20px;
+    padding: 10px 13px;
   }
   .fourth {
     padding: 30px;
