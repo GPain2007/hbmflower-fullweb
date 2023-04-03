@@ -113,6 +113,9 @@ a:hover,
     font-size: 30px;
   }
   .imagewords {
-    font-size: 20px;
+    font-size: 35px;
+  }
+  a {
+    font-weight: bolder;
   }
 }

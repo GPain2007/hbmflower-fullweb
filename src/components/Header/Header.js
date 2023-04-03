@@ -53,7 +53,9 @@ function Header() {
                 paddingBottom: "10px",
               }}
             >
-              <h1>HBM FLower City</h1>
+              <a href="/">
+                <h1>HBM Flower City</h1>
+              </a>
             </Col>
             <Col
               style={{
@@ -62,8 +64,10 @@ function Header() {
                 alignItems: "center",
               }}
             >
-              <button type="button" className="contactUs" href="./contact">
-                Contact Us
+              <button type="button" className="contactUs">
+                <a href="/contact" className="contactUs">
+                  Contact Us
+                </a>
               </button>
             </Col>
           </Row>
@@ -78,14 +82,16 @@ function Header() {
           <Row>
             <Col
               className="headerRow"
-              xs={{ span: 10 }}
+              xs={{ span: 9 }}
               style={{
-                paddingLeft: "67px",
+                paddingLeft: "95px",
                 paddingTop: "20px",
                 paddingBottom: "10px",
               }}
             >
-              <h1>HBM FLower City</h1>
+              <a href="/">
+                <h1>HBM Flower City</h1>
+              </a>
             </Col>
             <Col
               style={{
@@ -94,8 +100,10 @@ function Header() {
                 alignItems: "center",
               }}
             >
-              <button type="button" className="contactUs" href="./contact">
-                Contact Us
+              <button type="button" className="contactUs">
+                <a href="/contact" className="contactUs">
+                  Contact Us
+                </a>
               </button>
             </Col>
           </Row>
