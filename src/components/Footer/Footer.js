@@ -143,7 +143,7 @@ function Footer() {
                   flexDirection: "column",
                 }}
               >
-                <div className="word">
+                <div className="footer_word">
                   <div>Want to work with HBM Flower City?</div> Send us an email
                   at{" "}
                   <a

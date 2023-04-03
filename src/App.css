@@ -88,7 +88,7 @@
     display: none;
   }
   .about-title {
-    font-size: small;
+    font-size: large;
     padding-top: 24px;
   }
   .third {
@@ -96,7 +96,7 @@
   }
 
   .word {
-    font-size: 15px;
+    font-size: 13px;
   }
   .about-second {
     padding: 10px 20px;

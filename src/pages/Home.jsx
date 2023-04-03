@@ -86,12 +86,7 @@ function Home({ show }) {
                 adding flowers.
               </div>
               <div className="third">
-                <LazyLoadImage
-                  src={IMG9}
-                  alt="flower image"
-                  height={300}
-                  width={175}
-                />
+                <img src={IMG9} alt="portrait" height={370} width={175} />
               </div>
             </div>
             <Footer />
