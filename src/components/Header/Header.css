@@ -1,6 +1,8 @@
 .headerRow {
   font-size: 40px;
-  font-family: "GlacialIndifferenceRegular";
+  font-family: "IM Fell English", serif;
+  font-style: italic;
+  font-weight: bolder;
   color: goldenrod;
   display: flex;
   justify-content: center;
