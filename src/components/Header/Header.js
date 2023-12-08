@@ -7,7 +7,7 @@ function Header() {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
 
   const toggleButtonVisibility = () => {
-    setIsButtonVisible(!isButtonVisible);
+    setIsButtonVisible((prevVisibility) => !prevVisibility);
   };
 
   const location = useLocation();
