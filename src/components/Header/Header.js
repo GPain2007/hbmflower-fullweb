@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Header.css";
 
 function Header() {
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
+
+  const toggleButtonVisibility = () => {
+    setIsButtonVisible(!isButtonVisible);
+  };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Reset button visibility when the route changes
+    setIsButtonVisible(true);
+  }, [location.pathname]);
+
   return (
     <>
       <div className="desktopView">
@@ -28,11 +42,13 @@ function Header() {
                 alignItems: "center",
               }}
             >
-              <button type="button" className="contactUs">
-                <a href="/contact" className="contactUs">
-                  Contact Us
-                </a>
-              </button>
+              {isButtonVisible && (
+                <button onClick={toggleButtonVisibility} className="contactUs">
+                  <Link to="/contact" className="contactUs">
+                    Contact Us
+                  </Link>
+                </button>
+              )}
             </Col>
           </Row>
           <Row className="paragraphRow">
