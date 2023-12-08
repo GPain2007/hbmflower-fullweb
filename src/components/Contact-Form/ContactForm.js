@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs, { send } from "emailjs-com";
@@ -98,12 +98,6 @@ const sendEmail = (values, actions) => {
 };
 
 const ContactForm = (props) => {
-  const [selectedReason, setSelectedReason] = useState(null);
-
-  const handleReasonChange = (event) => {
-    setSelectedReason(event.target.value);
-  };
-
   return (
     <Modal {...props} size="lg" className="contact_page_form">
       <Modal.Header class="text-center">
