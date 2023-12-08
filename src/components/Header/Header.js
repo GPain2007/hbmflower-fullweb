@@ -5,16 +5,26 @@ import "./Header.css";
 
 function Header() {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
-
-  const toggleButtonVisibility = () => {
-    setIsButtonVisible((prevVisibility) => !prevVisibility);
-  };
-
   const location = useLocation();
 
+  // This code still allows the button to stay visible during the after you navitgate to the contact page
+  // const toggleButtonVisibility = () => {
+  //   setIsButtonVisible(false);
+  // };
+  // Will work on how to better use useEffectso that htis doesnt happen
+  // useEffect(() => {
+  //   const unlisten = history.listen(() => {
+  //     setIsButtonVisible(true);
+  //   });
+
+  //   return () => {
+  //     unlisten();
+  //   };
+  // }, []);
+
   useEffect(() => {
-    // Reset button visibility when the route changes
-    setIsButtonVisible(true);
+    // Hide the button on the specific page
+    setIsButtonVisible(!location.pathname.includes("/contact"));
   }, [location.pathname]);
 
   return (
@@ -43,7 +53,7 @@ function Header() {
               }}
             >
               {isButtonVisible && (
-                <button onClick={toggleButtonVisibility} className="contactUs">
+                <button className="contactUs">
                   <Link to="/contact" className="contactUs">
                     Contact Us
                   </Link>
@@ -80,11 +90,13 @@ function Header() {
                 alignItems: "center",
               }}
             >
-              <button type="button" className="contactUs">
-                <a href="/contact" className="contactUs">
-                  Contact Us
-                </a>
-              </button>
+              {isButtonVisible && (
+                <button className="contactUs">
+                  <Link to="/contact" className="contactUs">
+                    Contact Us
+                  </Link>
+                </button>
+              )}
             </Col>
           </Row>
           <Row className="paragraphRow">
@@ -116,11 +128,13 @@ function Header() {
                 alignItems: "center",
               }}
             >
-              <button type="button" className="contactUs">
-                <a href="/contact" className="contactUs">
-                  Contact Us
-                </a>
-              </button>
+              {isButtonVisible && (
+                <button className="contactUs">
+                  <Link to="/contact" className="contactUs">
+                    Contact Us
+                  </Link>
+                </button>
+              )}
             </Col>
           </Row>
           <Row className="paragraphRow">
