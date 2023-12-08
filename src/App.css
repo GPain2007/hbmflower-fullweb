@@ -21,6 +21,11 @@
   background-color: #fff7f4;
 }
 
+.contact_button {
+  margin: 0;
+  justify-content: center;
+}
+
 .desktopView {
   display: block;
   background-color: #fff7f4;
@@ -34,6 +39,14 @@
 }
 
 .contact_page {
+  background-color: #fff7f4;
+  color: goldenrod;
+  font-size: 30px;
+  font-family: "GlacialIndifferenceRegular";
+  background-position: 0% 30%;
+}
+
+.contact_page_form {
   background-color: #fff7f4;
   color: goldenrod;
   font-size: 30px;
