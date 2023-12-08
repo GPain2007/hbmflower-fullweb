@@ -98,6 +98,12 @@ const sendEmail = (values, actions) => {
 };
 
 const ContactForm = (props) => {
+  const [selectedReason, setSelectedReason] = useState(null);
+
+  const handleReasonChange = (event) => {
+    setSelectedReason(event.target.value);
+  };
+
   return (
     <Modal {...props} size="lg" className="contact_page_form">
       <Modal.Header class="text-center">
@@ -290,9 +296,49 @@ const ContactForm = (props) => {
                       <div role="group" aria-labelledby="reason-group">
                         <div>
                           <label>
-                            <Field type="radio" name="reason" value="Wedding" />{" "}
+                            <Field
+                              type="radio"
+                              name="reason"
+                              value="Wedding"
+                              //   onChange={handleReasonChange}
+                            />{" "}
                             Wedding
                           </label>
+                          {/* Inner radio selector for Wedding option */}
+                          {/* {selectedReason === "Wedding" && ( */}
+
+                          <Field name="reason">
+                            {({ field }) => (
+                              //   field.value === "Wedding" && (
+                              <div
+                                style={{
+                                  marginLeft: "25px",
+                                  display:
+                                    field.value === "Wedding"
+                                      ? "block"
+                                      : "none",
+                                }}
+                              >
+                                <label>
+                                  <Field
+                                    type="radio"
+                                    name="weddingType"
+                                    value="FullService"
+                                  />{" "}
+                                  Full Service
+                                </label>
+                                <label>
+                                  <Field
+                                    type="radio"
+                                    name="weddingType"
+                                    value="ALaCart"
+                                  />{" "}
+                                  A La Cart (just purchasing a bouquet, altar
+                                  arrangements, etc)
+                                </label>
+                              </div>
+                            )}
+                          </Field>
                         </div>
                         <div>
                           <label>
@@ -310,28 +356,7 @@ const ContactForm = (props) => {
                             Floral Arrangment
                           </label>
                         </div>
-                        <div>
-                          <label>
-                            <Field
-                              type="radio"
-                              name="reason"
-                              value="Full Service"
-                            />{" "}
-                            Full service design (minimun floral investment is
-                            $3500)
-                          </label>
-                        </div>
-                        <div>
-                          <label>
-                            <Field
-                              type="radio"
-                              name="reason"
-                              value="A La Cart"
-                            />{" "}
-                            A La Cart (just purchasing a bouquet, alter
-                            arrangements, etc)
-                          </label>
-                        </div>
+
                         <div>
                           <label>
                             <Field type="radio" name="reason" value="Other" />{" "}
